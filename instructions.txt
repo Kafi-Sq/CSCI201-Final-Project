@@ -1,0 +1,114 @@
+Due Date 12/5/2021
+Final Project: Human Resource Management
+
+Write C++ program for HRM department withthe following main menu.
+Main Menu
+1.Add New Employee
+2. Delete an Employee
+3. Update Employee Information
+4. Search for an Employee
+5. QuitPlease enter your choice 1..5 :
+
+You should use class definition Employeeand class definition HRM. Note that in class Employee, setting the values for all fields is not possible. 
+You have to calculate the value for the field “annualSalary” after initializing the fields “workingHours” ,“costPerHour” and “deduction”by user. 
+For those which the set function works, the validity of the entered data should be checked. For example, negative values for fields “annualSalary”, 
+”workingHours”,”costPerHour” and “deduction”are not accepted. As another example the field “workingHours” should be between 1 and 60.
+
+Class Employee should include following private fields:
+    •employeeID (Integer)
+    •firstName (String)
+    •lastName (String)
+    •workingHours (Float)
+    •costPerHour (Float)
+    •deduction(Float)
+    •annualSalary(Double)
+
+Class Employee should have member functions for setting and getting the private fields. Member functions should have the following naming style:
+    •set_fieldName()
+    •get_fieldName()
+Note: FieldName is FirstName or LastName ......etc.
+The field “employeeID” of class Employee should be unique and auto-increment with the initial value of 1001 for the first employee. It means that 
+user should not enter the value for “employeeID”.
+
+Class HRM should include following public fields: 
+    •Array ofemployees with the type Employee
+    •The actual number of employees which is stored in Array of Employees
+
+Class HRM should include following public member functions:
+    •addEmployee(...)
+    •deleteEmployee(...)
+    •updateEmployee(...)
+    •searchEmployee(...)
+Your program should read the first 5 employees from text file named “employee.txt”.
+Please note that you need to check the actual amount of employees and in case of reaching to the number 100 for the total number of employees you 
+should give proper message. For the actual amount of employees you should not enter the value yourself and your program should calculate automatically 
+the amount while entering or deleting the information of an employee.
+Based on the description of the program, you need to define some arguments for functions 
+deleteEmployee(...), 
+updateEmployee(...),
+searchEmployee(...)
+
+1. AddEmployee() 
+This function allows users to enter the related information of employees in class HRM. During the initialization step your program should get the 
+working hours per week (e.g. 35) for the employee and the payment for his/her work per hour, and the amount of deduction.Then, you should calculate 
+the annualsalary. You should consider 52 working weeks for oneyear in your calculations.
+Following is the sample output of this function.
+
+    Please enter the first name of an employee? Alex
+    Please enter the last name of an employee? Peterson
+    How many hours a week is his/her work? 35
+    How much per hour is his/her wage? 20
+    How much total deduction? 115
+
+The employee with the following information has been added to the system:
+EmployeeID First Name Last Name Salary per year ($)
+-------------------------------------------------------
+1001        Alex       Peterson   30,420.00
+
+Do you want to add another employee (y/n)? n
+
+2.deleteEmployee(...)
+This function allows user to delete the employee information. Since the only unique value inthe list of employees is “Employee ID”, therefore delete 
+function should be based on this field. Note that in order to enter the correct Employee ID of employee you need to find his/her Employee ID using the 
+function searchEmployee(...).
+
+    Please enter the employee ID? 2425374
+    Sorry, there is not any employee with this ID. 
+    Do you want to repeat delete by entering new employee ID(y/n)? y
+    Please enter the employee ID? 1079
+    Do you really want to delete employee Michael Jackson (y/n)? y
+    The employee Michael Jackson has been deleted. 
+    Do you want to repeat delete by entering new employee ID(y/n)? n
+
+3. updateEmployee(...)
+This function allows user to make changes on information of all fields the except the field “Employee ID” is not allowed to be changed. For example, 
+if user wants to change the number of working hours for specific employee, he should use this function. Since the only unique value in the list of 
+employees is “Employee ID”, therefore update function should be based on this field. Note that during the update process, if user changes fields 
+“working hours” or “deduction”, you need to re-calculate yearly salary based on new values and update related fields.
+
+    Please enter the employee ID? 2425374
+    Sorry, there is no employee with this ID?
+    Do you want to repeat update by entering new employee ID(y/n)? y
+    Please enter employee ID? 1001
+    Please enter the related number of field which you would like to update?
+    (1. First name, 2. Family name, 3. Working hours per week, 4. Payment for one hour, 5. deduction)? 4
+    Please enter new payment for one hour in $ for Mr. Peterson? 25
+    Do you want to update any other field (y/n)? n
+    The information for Mr. Peterson has been updated. 
+    Do you want to repeat update by entering new employee ID(y/n)? n
+
+4. searchEmployee(...)
+In this function, user can find specific employee using employee ID field.
+ 
+    Please enter the employee ID? 1003
+    Employee ID First Name Family Name Annual salary
+    -------------------------------------------------
+    1003        Martin      Klein        81,900.00
+
+    Do you want to do new search (y/n)? y
+    Please enter the employee ID? 1001
+    Employee ID First Name Family Name Annualsalary
+    -------------------------------------------------------------
+    1001    Alex        Peterson        45,500.00
+
+    Do you want to do new search (y/n)? n
