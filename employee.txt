@@ -1,0 +1,5 @@
+1001 Jack Smith 40 18 120
+1002 Jane Doe 40 19 100
+1003 Bob Lane 35 17 95
+1004 Alex Williams 20 12 150
+1005 Fiona Davis 40 22 110

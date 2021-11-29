@@ -7,7 +7,8 @@ Main Menu
 2. Delete an Employee
 3. Update Employee Information
 4. Search for an Employee
-5. QuitPlease enter your choice 1..5 :
+5. Quit
+Please enter your choice 1..5 :
 
 You should use class definition Employeeand class definition HRM. Note that in class Employee, setting the values for all fields is not possible. 
 You have to calculate the value for the field “annualSalary” after initializing the fields “workingHours” ,“costPerHour” and “deduction”by user. 
@@ -19,8 +20,7 @@ Class Employee should include following private fields:
     •firstName (String)
     •lastName (String)
     •workingHours (Float)
-    •costPerHour (Float)
-    •deduction(Float)
+    •costPerHour (Float) fdlo dwd whd wdwj yu dwh sh swh scsdw fjhef s c kk cjsc sic csjcsc scj 
     •annualSalary(Double)
 
 Class Employee should have member functions for setting and getting the private fields. Member functions should have the following naming style:
